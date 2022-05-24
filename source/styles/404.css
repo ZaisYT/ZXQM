@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+body {
+    background-color: #333333;
+    cursor: default;
+}
+
+.e404 {
+    font-family: 'Koulen', cursive;
+    font-size: 175px;
+    color: aliceblue;
+    position: absolute; top: 150px; left: 810px;
+}
+
+.inferr {
+    font-family: 'Koulen', cursive;
+    font-size: 48px;
+    color: aliceblue;
+    position: absolute; top: 500px; left: 420px;
+}
