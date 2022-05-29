@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #333333;
+    cursor: default;
+}
+
+.txtholder {
+    position: absolute; top: 150px; left: 270px;
+}
+
+.whatis {
+    position: relative;
+}
+
+.wititle, .ititle {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 72px;
+    color: #fff;
+}
+
+.interested {
+    position: relative; top: 70px;
+}
+
+.itxt1, .itxt2, .witxt1, .witxt2, .itxt3{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    color: #fff;
+}
+
+.itxt3 {
+    position: relative; top: 200px;
+}
+
+.faqref, .cntcref{
+    transition: color .7s;
+    color: #8F8E83;
+}
+
+.btnholder {
+    position: relative; top: 75px; left: 100px;
+}
+
+.testitbtn, .faqbtn {
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+    margin-right: 100px;
+    position: relative; left: 350px;
+    width: 150px; height: 75px;
+    transition: background-color .5s;
+    background-color: #0c0c0c;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+}
+
+.testitbtn:hover, .faqbtn:hover {
+    transition: background-color .5s;
+    background-color: #5c5c5c;
+}
+
+.testitbtn:active, .faqbtn:active {
+    background-color: #5c5c5c;
+}
+
+.faqref:hover, .cntcref:hover {
+    transition: color .7s;
+    color: #7D7633;
+}

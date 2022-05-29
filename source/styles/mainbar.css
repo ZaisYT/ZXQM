@@ -1,15 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
 .company {
-    position: absolute; top: -30px; left: 80px;
+    position: absolute; top: 10px; left: 80px;
     font-size: 42px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
+    color: #fff;
 }
 
 .slogan {
-    position: absolute; top: 50px; left: 25px;
+    position: absolute; top: 60px; left: 25px;
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
+    color: #fff;
 }
 
 .bigbox {
@@ -19,29 +27,27 @@
     background-color: #1F1F1F;
 }
 
-.srchead {
+.srchead, .faqhead, .abthead {
+    font-family: 'Anton', sans-serif;
     cursor: pointer;
-    position: absolute; top: 40px; left: 1700px;
-    background: 0%;
-    border: none;
-    color: white;
+    transition: color .7s;
+    color: #fff;
     font-size: 20px;
+}
+
+.srchead {
+    position: absolute; top: 40px; left: 1700px;
 }
 
 .faqhead {
-    cursor: pointer;
     position: absolute; top: 40px; left: 1600px;
-    background: 0%;
-    border: none;
-    color: white;
-    font-size: 20px;
 }
 
 .abthead {
-    cursor: pointer;
     position: absolute; top: 40px; left: 1400px;
-    background: 0%;
-    border: none;
-    color: white;
-    font-size: 20px;
+}
+
+.abthead:hover, .faqhead:hover, .srchead:hover {
+    transition: color .7s;
+    color: #ff6600;
 }

@@ -1,0 +1,72 @@
+body {
+  background-color: #363636;
+}
+
+.ButtonHolder {
+  position: absolute; top: 600px; left: 125px;
+}
+
+.playbutton, .pausebutton {
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  transition: background-color .4s;
+  background-color: #252525;
+  font-size: 24px;
+  font-family: Impact;
+  color: #fff;
+}
+
+.pausebutton:hover, .playbutton:hover {
+  transition: background-color .4s;
+  background-color: #5f5d5d;
+}
+
+.pausebutton:active, .playbutton:active {
+  transition: background-color .4s;
+  background-color: #cab600;
+}
+
+.repeatChecker {
+  position: relative; left: 215px; bottom: 70px;
+}
+
+.progressbar {
+  width: 410px; height: 20px;
+  position: relative; bottom: 130px;
+}
+
+.slideContainer {
+  position: relative; left: 270px; bottom: 40px;
+}
+
+.infosong {
+  position: absolute; bottom: 110px;
+}
+
+.name, .artist {
+  cursor: default;
+  position: relative; left: 160px; bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.image {
+  height: 150px; width: 150px;
+}
+
+.repeat {
+  color: #fff;
+}
+
+.check, .repeat {
+  cursor: pointer;
+}
+
+.volumetxt {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
