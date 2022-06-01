@@ -1,53 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+:root {
+    --primary:#2b2b2b;
+    --secundary: #656565;
+    --background: #363636;
+    --white-text: rgb(255, 255, 255);
+    --text: #fff;
+    --hover: #ff6600;;
+}
 
 * {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-.company {
-    position: absolute; top: 10px; left: 80px;
-    font-size: 42px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #fff;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.slogan {
-    position: absolute; top: 60px; left: 25px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #fff;
+nav {
+    background-color: var(--primary);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.bigbox {
-    position: absolute; top: 0px; left: 0px;
-    width: 1920px;
-    height: 110px;
-    background-color: #1F1F1F;
+header h1 {
+    cursor: default;
+    color: var(--text);
+    font-size: 2rem;
+    letter-spacing: .1rem;
 }
 
-.srchead, .faqhead, .abthead {
-    font-family: 'Anton', sans-serif;
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--text);
+    font-size: 1.2rem;
+    padding: .8rem 1rem;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover);
+    transition: all .3s;
+}
+
+.drawer {
+    color: var(--text);
+    float: left;
     cursor: pointer;
-    transition: color .7s;
-    color: #fff;
-    font-size: 20px;
+    display: none;
+    margin-left: 1rem;
+    border: solid .1rem var(--text);
+    padding: .2rem;
+    border-radius: .1rem;
 }
 
-.srchead {
-    position: absolute; top: 40px; left: 1700px;
+#ckbox {
+    display: none;
 }
 
-.faqhead {
-    position: absolute; top: 40px; left: 1600px;
-}
+@media(max-width:1035px){
 
-.abthead {
-    position: absolute; top: 40px; left: 1400px;
-}
+    nav{
+        justify-content: flex-start;
+    }
 
-.abthead:hover, .faqhead:hover, .srchead:hover {
-    transition: color .7s;
-    color: #ff6600;
+    .drawer{
+        display: block;
+    }
+
+    nav h1{
+        margin-left: 1rem;
+    }
+
+    ul{
+        position: fixed;
+        width: 85%;
+        height: 100vh;
+        background-color: var(--primary);
+        top: 10vh;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+    }
+
+    nav ul li{
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-bottom: solid .1rem rgba(201, 196, 196, 0.4) ;
+    }
+
+    #ckbox:checked ~ .menu-box{
+        left: 0;
+    }
 }
