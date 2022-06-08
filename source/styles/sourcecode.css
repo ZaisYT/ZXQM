@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+    --bgcolor: #363636;
+    --primarycol: #FF5100;
+    --txtcol: #FFF;
+    --btncolor: #0c0c0c;
+    --btnhover: #5c5c5c;
+    --bgsecondcol: #2b2b2b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bgcolor);
+}
+
+body p {
+    font-family: 'Anton', sans-serif;
+    color: var(--txtcol);
+    font-size: 2rem;
+}
+
+.mainheader {
+    padding: 12rem 0;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--primarycol);
+    width: 100%;
+    text-align: center;
+}
+
+.desc {
+    width: 100%;
+    padding: .1rem 0;
+    text-align: center;
+}
+
+.buttonholder {
+    padding: 1.3rem .7rem;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonholder {
+    text-align: center;
+}
+
+.viewgithub {
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    width: 20rem;
+    height: 5rem;
+    margin: 1rem;
+    text-transform: uppercase;
+    transition: background-color .3s;
+    background-color: var(--btncolor);
+    font-size: 1.5rem;
+    color: var(--txtcol);
+    border: none;
+    border-radius: .5rem;
+}
+
+.viewgithub:hover {
+    transition: background-color .3s;
+    background-color: var(--btnhover);
+}
+
+.viewgithub:active {
+    transition: background-color .2s;
+    background-color: var(--primarycol);
+}
+
+.langholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: var(--bgsecondcol);
+    text-align: center;
+}
+
+.langs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1.3rem 5rem;
+}
+
+.css, .html, .js {
+    width: 30rem;
+}
+
+.usedlangs {
+    font-size: 4rem;
+}
+
+.css {
+    border-right: 2px solid var(--primarycol);
+    border-left: 2px solid var(--primarycol);
+    margin: 0 2rem;
+}
+
+.langholder i {
+    font-size: 10rem;
+}
+
+.htmlico {color: #FF5100;}.cssico {color: #358BFF;}.jsico {color: #FFDC00;}
+
+@media(max-width:1035px){
+
+    .mainheader {
+        padding: 8rem 0;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body p {
+        font-family: 'Anton', sans-serif;
+        color: var(--txtcol);
+        font-size: 1.8rem;
+    }
+
+    .langholder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0;
+        background-color: var(--bgsecondcol);
+        text-align: center;
+    }
+
+    .usedlangs {
+        font-size: 2rem;
+    }
+
+    .langs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1.3rem .7rem;
+    }
+
+    .desclang {
+        font-size: 1.3rem;
+    }
+
+    .css, .html, .js {
+        width: 100%;
+    }
+
+    .css {
+        height: 25rem;
+        border-right: none;
+        border-left: none;
+        border-top: 2px solid var(--primarycol);
+        border-bottom: 2px solid var(--primarycol);
+        padding: 3vh 0;
+        margin: 0;
+    }
+
+    .html {
+        margin-bottom: 5vh;
+        height: 20rem;
+    }
+
+    .js {
+        margin-top: 5vh;
+    }
+}

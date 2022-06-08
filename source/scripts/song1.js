@@ -1,8 +1,9 @@
 var songa = new Audio("source/audios/NenaMaldicion.mp3");
-var songisplaying = false;
+var currentState = songa.paused;
 
 var loopbox = document.getElementById("loop");
 var slider = document.getElementById("volume");
+var switchbtn = document.getElementById("switchbtn");
 var progress = document.querySelector('#progress');
 
 songa.loop = loopbox.checked;
@@ -16,31 +17,33 @@ loopbox.oninput = function() {
     songa.loop = this.checked;
 }
 
-songa.addEventListener('timeupdate', function(){
+songa.addEventListener('timeupdate', function() {
     progress.value = songa.currentTime / songa.duration;
 });
 
-function playstate(){
-    if(songisplaying == false){
+songa.addEventListener("play", function() {
+    currentState = songa.paused;
+});
+
+songa.addEventListener("pause", function() {
+    currentState = songa.paused;
+});
+
+switchbtn.addEventListener("click", function() {
+    if(currentState == false) {
+        switchbtn.innerText = "Play";
+    } else if(currentState == true) {
+        switchbtn.innerText = "Pause";
+    }
+});
+
+function playerstate(){
+    if (currentState == true){
         songa;
         songa.play();
-        songisplaying = true;
-        timeout();
         console.log("AUDIO STARTED");
-    } else if (songisplaying == true){
-        console.log("AUDIO NOT STARTED BECAUSE TRACK IS ALREADY PLAYING");
-        return;
+    } else if(currentState == false) {
+        songa.pause();
+        console.log("AUDIO PAUSED");
     }
-}
-
-function pausestate(){
-    songa.pause();
-    songisplaying = false;
-    console.log("AUDIO PAUSED");
-}
-
-function timeout(){
-    setTimeout(() => {
-        songisplaying = false;
-      }, 232000)
 }

@@ -17,3 +17,7 @@ function aboutpage(){
 function fofpage(){
     window.location.href="404.html";
 }
+
+function github(){
+    window.location.href="https://github.com/ZaisYT/ZXQM";
+}

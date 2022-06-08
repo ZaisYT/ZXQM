@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -11,33 +11,28 @@ body {
 }
 
 .txtholder {
-    position: absolute; top: 150px; left: 270px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.whatis {
-    position: relative;
+.whatis, .interested {
+    padding: 12rem 1rem;
+}
+
+p, button {
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
 }
 
 .wititle, .ititle {
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-    font-size: 72px;
-    color: #fff;
-}
-
-.interested {
-    position: relative; top: 70px;
+    font-size: 4rem;
 }
 
 .itxt1, .itxt2, .witxt1, .witxt2, .itxt3{
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-    font-size: 32px;
-    color: #fff;
-}
-
-.itxt3 {
-    position: relative; top: 200px;
+    font-size: 2rem;
 }
 
 .faqref, .cntcref{
@@ -46,21 +41,18 @@ body {
 }
 
 .btnholder {
-    position: relative; top: 75px; left: 100px;
+    margin-left: 1rem;
 }
 
 .testitbtn, .faqbtn {
-    border-radius: 10px;
-    border: 0px;
+    border-radius: .7rem;
+    border: 0;
     cursor: pointer;
-    margin-right: 100px;
-    position: relative; left: 350px;
-    width: 150px; height: 75px;
+    width: 10rem;
+    height: 7vh;
     transition: background-color .5s;
     background-color: #0c0c0c;
-    color: #fff;
-    font-size: 20px;
-    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
 }
 
 .testitbtn:hover, .faqbtn:hover {
@@ -75,4 +67,19 @@ body {
 .faqref:hover, .cntcref:hover {
     transition: color .7s;
     color: #ff6600;
+}
+
+@media(max-width:1035px){
+
+    .whatis, .interested {
+        padding: 6rem 1rem;
+    }
+
+    .wititle, .ititle {
+        font-size: 2.7rem;
+    }
+    
+    .itxt1, .itxt2, .witxt1, .witxt2, .itxt3{
+        font-size: 1.8rem;
+    }
 }
