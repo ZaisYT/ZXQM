@@ -1,5 +1,5 @@
 function mainpage(){
-    window.location.href="main.html";
+    window.location.href="index.html";
 }
 
 function testpage(){
