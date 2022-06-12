@@ -1,3 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+:root {
+    --bgcol: #363636;
+    --primarycol: #FF5100;
+    --txtcol: #FFF;
+    --btncolor: #0c0c0c;
+    --btnhover: #5c5c5c;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    background-color: #363636;
+    background-color: var(--bgcol);
+    color: var(--txtcol);
+    font-size: 2rem;
+}
+
+.flexcont {
+    padding-inline: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainwords, .functions, .try {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    margin-block: 5vh;
+    font-size: 2rem;
+    line-height: 5vh;
+}
+
+.buttonholder {
+    display: flex;
+    justify-content: center;
+}
+
+.about, .faq, .sourcecode, .contact {
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 20rem;
+    height: 5rem;
+    margin: 1rem;
+    text-transform: uppercase;
+    transition: background-color .3s;
+    background-color: var(--btncolor);
+    font-size: 1.5rem;
+    color: var(--txtcol);
+    border: none;
+    border-radius: .5rem;
+}
+
+.about:hover, .faq:hover, .sourcecode:hover, .contact:hover {
+    transition: background-color .3s;
+    background-color: var(--btnhover);
+}
+
+.about:active, .faq:active, .sourcecode:active, .contact:active {
+    transition: background-color .2s;
+    background-color: var(--primarycol);
+}
+
+.mainwords {
+    font-size: 4rem;
+    line-height: 7vh;
+}
+
+.functions {
+    text-align: end;
+    margin-block: 5vh;
+}
+
+@media(max-width:1035px){
+
+    .flexcont {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 1rem;
+    }
+
+    .buttonholder {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .about, .faq, .sourcecode, .contact {
+        margin: .2rem;
+        font-size: 1rem;
+    }
+
+    .mainwords, .functions, .try {
+        margin-block: 8vh;
+        font-size: 1.3rem;
+        line-height: 3vh;
+    }
+
+    .mainwords {
+        font-size: 3rem;
+        line-height: 5vh;
+    }
 }
