@@ -1,5 +1,5 @@
 function mainpage(){
-    window.location.href="index.html";
+    window.location.href="main.html";
 }
 
 function testpage(){
@@ -14,8 +14,12 @@ function aboutpage(){
     window.location.href="about.html";
 }
 
-function fofpage(){
-    window.location.href="404.html";
+function contact(){
+    window.location.href="contact.html";
+}
+
+function source(){
+    window.location.href="sourcecode.html";
 }
 
 function github(){
