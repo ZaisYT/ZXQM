@@ -3,7 +3,7 @@ function mainpage(){
 }
 
 function testpage(){
-    window.location.href="Pl-nenamaldicion.html";
+    window.location.href="player.html?id=1";
 }
 
 function faqpage(){
