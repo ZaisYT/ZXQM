@@ -18,8 +18,9 @@ var switchbtn = document.getElementById("switchbtn");
 var duration = document.getElementById("duration");
 var artist = document.getElementById("artist");
 var namesong = document.getElementById("name");
+var lyrbtn = document.getElementById("lyrbtn");
 var lyricshow = document.getElementById("lyricshow");
-var imgcontainer = document.querySelector('.infosong');
+var imgcontainer = document.querySelector('.imgholder');
 var progress = document.querySelector('#progress');
 var title = document.querySelector('title');
 
@@ -38,7 +39,7 @@ fetch(`${jsonPath}/${id}.json`).then(res => res.json()).then(data => {
     namesong.innerHTML = data.name;
     var imagen = document.createElement('img');
     imagen.src = "source/images/" + imgfilenames[id];
-    imagen.className = "imageind"
+    imagen.className = "imageind";
     imgcontainer.appendChild(imagen);
     title.textContent = data.name + ' - ' + data.artist + ' // ZXQM';
 }).catch(err => console.log(err));
@@ -84,7 +85,15 @@ switchbtn.addEventListener("click", function() {
     if(currentState == false) {
         switchbtn.innerText = "Play";
     } else if(currentState == true) {
-        switchbtn.innerText = "Pause";
+        switchbtn.innerText = "Pausa";
+    }
+});
+
+lyrbtn.addEventListener("click", function() {
+    if(toggled == false) {
+        lyrbtn.innerText = "Ocultar Letras";
+    } else if(toggled == true) {
+        lyrbtn.innerText = "Mostrar Letras";
     }
 });
 
