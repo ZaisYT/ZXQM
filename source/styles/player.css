@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  padding-block: 19vh;
+  padding-block: 15vh;
 }
 
 .info {
