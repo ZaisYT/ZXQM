@@ -1,75 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+  --text: #fff;
+  --bgcol: #363636;
+  --secondarycol: #FF5100;
+  --btncolor: #0c0c0c;
+  --btnhover: #5c5c5c;
+  --bgsecondcol: #202020;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #363636;
+  background-color: var(--bgcol);
+  color: var(--text);
 }
 
-.flexcont{
+.flexcont {
   display: flex;
-  padding-top: .5rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  padding-block: 19vh;
+}
+
+.info {
+  flex-direction: column;
+  text-align: center;
+}
+
+.infosong {
+  font-size: 1.7rem;
+}
+
+.imgholder {
+  display: flex;
   justify-content: center;
+  margin-block: 1.2rem;
 }
 
-.switchbtn, .lyrbtn {
-  cursor: pointer;
-  align-items: center;
-  border-radius: 10px;
-  width: 5rem;
-  height: 5vh;
+.imgind {
+  width: 60%;
+}
+
+.buttonHolder {
+  display: flex;
+  justify-content: center;
+  margin-block: 1.5rem;
+}
+
+.lyrbtn, .switchbtn {
+  margin-inline: .5rem;
+  background-color: var(--btncolor);
+  color: var(--text);
   border: none;
-  transition: background-color .4s;
-  background-color: #252525;
-  font-size: 24px;
-  font-family: Impact;
-  color: #fff;
+  border-radius: .5rem;
+  width: 8rem;
+  height: 2.5rem;
+  cursor: pointer;
+  font-family: 'Anton', sans-serif;
+  font-size: 1rem;
 }
 
-.pausebutton:hover, .playbutton:hover {
-  transition: background-color .4s;
-  background-color: #5f5d5d;
-}
-
-.pausebutton:active, .playbutton:active {
-  transition: background-color .4s;
-  background-color: #cab600;
+.progressholder {
+  display: flex;
+  justify-content: center;
+  margin-block: 1rem;
 }
 
 .progressbar {
-  width: 410px; height: 20px;
+  margin-inline: .5rem;
+  width: 60%;
+  -webkit-appearance: none;
 }
 
-.nameind, .artistind {
-  cursor: default;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #fff;
+::-webkit-progress-bar {
+  border-radius: .5rem;
+  background-color: var(--btncolor);
 }
 
-.imageind {
-  height: 150px; width: 150px;
+::-webkit-progress-value {
+  border-radius: .5rem;
+  background-color: var(--secondarycol);
 }
 
-.repeat {
-  color: #fff;
+.durtxt {
+  margin-inline: .5rem;
 }
 
-.check, .repeat {
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.voltxt {
+  font-size: 1.5rem;
+}
+
+.volumecnt {
+  margin-inline: .5rem;
+  background: var(--btncolor);
+  border-radius: 1rem;
+  -webkit-appearance: none;
+}
+
+.volumecnt::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background: var(--secondarycol);
   cursor: pointer;
 }
 
-.volumetxt, .lyricshow {
-  font-family: Arial, Helvetica, sans-serif;
+.volumecnt::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  background: var(--secondarycol);
+  cursor: pointer;
+}
+
+.fa-repeat {
+  font-size: 2rem;
+  cursor: pointer;
   color: #fff;
 }
 
-.durationind {
-  color: #fff;
-  width: 500px;
+.lyricholder {
+  margin-block: 2rem;
+  background-color: var(--bgsecondcol);
 }
 
-@media(max-width:1035px){
+.lyrtxt {
+  padding: .5rem;
+}
+
+#loop {
+  display: none;
+}
+
+#loop:checked ~ .fa-repeat {
+  color: var(--secondarycol);
+}
+
+@media(max-width:1035px) {
+
+  .flexcont {
+    padding-block: 10vh;
+  }
   
+  .imgholder {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; max-width: 15rem;
+    height: 100%; max-height: 15rem;
+  }
+
 }
