@@ -53,6 +53,7 @@ body {
 
 .lyrbtn, .switchbtn {
   margin-inline: .5rem;
+  transition: background-color .5s;
   background-color: var(--btncolor);
   color: var(--text);
   border: none;
@@ -62,6 +63,11 @@ body {
   cursor: pointer;
   font-family: 'Anton', sans-serif;
   font-size: 1rem;
+}
+
+.lyrbtn:hover, .switchbtn:hover {
+  transition: background-color .5s;
+  background-color: var(--btnhover);
 }
 
 .progressholder {
