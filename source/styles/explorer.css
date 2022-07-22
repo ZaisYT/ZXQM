@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+    --bgcolor: #363636;
+    --primarycol: #FF5100;
+    --txtcol: #FFF;
+    --btncolor: #2b2b2b;
+    --btnhover: #5c5c5c;
+    --acol: #6d2d00;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bgcolor);
+}
+
+.holder {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+}
+
+.holder .timeholder {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--primarycol);
+    font-size: 35px;
+    border-bottom: 2px solid var(--acol);
+    width: 345px;
+}
+
+.holder .timeholder i{
+    margin: 1rem;
+}
+
+.holder .sholder {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.holder .sholder span.title {
+    color: var(--primarycol);
+    font-size: 35px;
+}
+
+.holder .sholder .songs {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 400px);
+}
+
+.holder .sholder .songs div{
+    display: flex;
+    flex-direction: row;
+    margin-inline: .5rem;
+    background-color: var(--btncolor);
+    width: 400px;
+    text-align: center;
+    height: auto;
+    cursor: pointer;
+}
+
+.holder .sholder .songs div img {
+    width: 82px;
+    height: 82px;
+    margin-right: 1rem;
+}
+
+.holder .sholder .songs div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.holder .sholder .songs div div span {
+    margin-block: .2rem;
+    color: var(--txtcol);
+}
