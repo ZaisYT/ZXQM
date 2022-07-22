@@ -23,7 +23,9 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  padding-block: 15vh;
+  padding-top: 2vh;
+  margin-inline: .5rem;
+  margin-left: 75px;
 }
 
 .info {
@@ -42,35 +44,38 @@ body {
 }
 
 .imgind {
+  min-width: 255px;
+  max-width: 255px;
+  min-height: 255px;
+  max-height: 255px;
   width: 60%;
 }
 
 .buttonHolder {
   display: flex;
   justify-content: center;
-  margin-block: 1.5rem;
 }
 
-.lyrbtn, .switchbtn {
+.lyrbtn, .switchbtn, .backtotop {
   margin-inline: .5rem;
   transition: background-color .3s;
   background-color: var(--btncolor);
   color: var(--text);
   border: none;
-  border-radius: .5rem;
-  width: 8rem;
+  border-radius: 100%;
+  width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
   font-family: 'Anton', sans-serif;
   font-size: 1rem;
 }
 
-.lyrbtn:hover, .switchbtn:hover {
+.lyrbtn:hover, .switchbtn:hover, .backtotop:hover {
   transition: background-color .3s;
   background-color: var(--btnhover);
 }
 
-.lyrbtn:active, .switchbtn:active {
+.lyrbtn:active, .switchbtn:active, .backtotop:active {
   transition: background-color .2s;
   background-color: var(--secondarycol);
 }
@@ -78,22 +83,34 @@ body {
 .progressholder {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-block: 1rem;
 }
 
-.progressbar {
-  margin-inline: .5rem;
-  width: 60%;
+#seekslider {
+  cursor: pointer;
+  width: 50%;
   -webkit-appearance: none;
-}
-
-::-webkit-progress-bar {
-  border-radius: .5rem;
+  overflow: hidden;
   background-color: var(--btncolor);
+  border-radius: 1rem;
 }
 
-::-webkit-progress-value {
-  border-radius: .5rem;
+#seekslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  box-shadow: -2000px 0 0 2000px var(--secondarycol);
+  background-color: var(--secondarycol);
+}
+
+#seekslider::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: -2000px 0 0 2000px var(--secondarycol);
   background-color: var(--secondarycol);
 }
 
@@ -107,12 +124,14 @@ body {
   justify-content: center;
 }
 
-.voltxt {
+#volico {
+  cursor: pointer;
   font-size: 1.5rem;
+  padding-top: .35rem;
+  padding-inline: .75rem;
 }
 
 .volumecnt {
-  margin-inline: .5rem;
   background: var(--btncolor);
   border-radius: 1rem;
   -webkit-appearance: none;
@@ -145,7 +164,49 @@ body {
 
 .lyricholder {
   margin-block: 2rem;
+  padding: .5rem;
   background-color: var(--bgsecondcol);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 40vh;
+  overflow: auto;
+}
+
+.lyricholder::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 100%;
+  background: var(--secondarycol);
+  cursor: pointer;
+}
+
+.lyricholder::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background: var(--bgsecondcol);
+  cursor: pointer;
+}
+
+.lyricholder::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: var(--secondarycol);
+  cursor: pointer;
+}
+
+.lyricholder::-webkit-scrollbar-thumb:hover {
+  border-radius: 1rem;
+  background: var(--secondarycol);
+  cursor: pointer;
+}
+
+.lyric {
+  padding-block: .5rem;
+}
+
+.backtotop {
+  margin-block: 0.5rem;
+  width: auto;
 }
 
 .lyrtxt {
@@ -161,10 +222,15 @@ body {
   color: var(--secondarycol);
 }
 
+.imageind {
+  width: 255px;
+  height: 255px;
+}
+
 @media(max-width:1035px) {
 
   .flexcont {
-    padding-block: 10vh;
+    padding-top: 4vh;
   }
   
   .imgholder {
@@ -174,6 +240,10 @@ body {
     margin-right: auto;
     width: 100%; max-width: 15rem;
     height: 100%; max-height: 15rem;
+  }
+
+  .durtxt {
+    margin-inline: 0.1rem;
   }
 
 }
