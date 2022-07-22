@@ -2,8 +2,18 @@ function mainpage(){
     window.location.href="index.html";
 }
 
-function testpage(){
-    window.location.href="player.html?id=1";
+function player(num){
+    window.location.href="player.html?id="+num;
+}
+
+function art(num){
+    if(num == 1){
+        window.location.href="badbunny.html";
+    } else if (num == 2){
+        window.location.href="crismj.html";
+    } else {
+        console.error("UNEXPECTED NUMBER PLEASE USE 1 OR 2");
+    }
 }
 
 function faqpage(){
@@ -23,5 +33,9 @@ function source(){
 }
 
 function github(){
-    window.location.href="https://github.com/ZaisYT/ZXQM";
+    window.open("https://github.com/ZaisYT/ZXQM", '_blank');
+}
+
+function expl(){
+    window.location.href="explorer.html";
 }
