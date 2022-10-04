@@ -1,0 +1,64 @@
+/*  font-family: 'Roboto Mono', monospace;  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+/*  font-family: 'Carrois Gothic', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+
+/*  font-family: 'Imprima', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
+:root {
+    --headbgcol: #0f0e17;
+    --headhovercol: #ff8906;
+    --headtextcol: #fffffe;
+    --headlinkcol: #a7a9be;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 5vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--headbgcol);
+    border-bottom: solid 1px #fff;
+    z-index: 10;
+}
+
+header > a {
+    margin-left: 150px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--headtextcol);
+}
+
+header ul {
+    display: flex;
+    padding-right: 150px;
+    margin-left: auto;
+    flex-direction: row;
+}
+
+header ul li {
+    list-style: none;
+    padding: 15px;
+}
+
+header ul li:hover > a {
+    transition: color .3s;
+    color: var(--headhovercol);
+}
+
+header ul li a {
+    font-size: 1.1rem;
+    font-family: 'Imprima', sans-serif;
+    transition: color .3s;
+    color: var(--headlinkcol);
+    text-decoration: none;
+}
