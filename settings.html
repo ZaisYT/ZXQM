@@ -71,6 +71,18 @@
                 </div>
             </div>
         </div>
-        <script src="source/scripts/form.js"></script>
+        <script type="text/javascript">
+            var form = document.getElementById('settings');
+            const quality = form.elements['quality'];
+            
+            if (localStorage.getItem("selQual")) quality.value = localStorage.getItem("selQual");
+            
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                let qval = quality.value;
+                localStorage.setItem("selQual", qval);
+                console.log(`Submitted ${qval} to the cookies.`);
+            });
+        </script>
     </body>
 </html>
