@@ -1,0 +1,94 @@
+/*  font-family: 'Roboto Mono', monospace;  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+/*  font-family: 'Carrois Gothic', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+
+/*  font-family: 'Imprima', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
+:root {
+    --bgcol: #0f0e17;
+    --bg2col: #141224;
+    --bg3col: #1d1b2c;
+    --hovercol: #ff8906;
+    --titlescol: #fffffe;
+    --paraphcol: #a7a9be;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.flex-holder {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+body {
+    margin-top: 5vh;
+    background-color: var(--bg2col);
+    color: var(--titlescol);
+}
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 42px;
+    color: var(--hovercol);
+    letter-spacing: -2px;
+}
+
+.flex-holder > h1:first-child {
+    margin-block: 30px;
+}
+
+.flex-holder > .form-setts h1 {
+    margin-bottom: 10px;
+}
+
+.flex-holder > .zxqm-copy h1{
+    margin-bottom: 10px;
+}
+
+.copy-songs{
+    margin-block: 20px;
+}
+
+h2 {
+    color: var(--titlescol);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+}
+
+p {
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 20px;
+    color: var(--paraphcol);
+}
+
+.form-setts {
+    margin-block: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > label {
+    font-family: 'Imprima', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+form div > select, input {
+    padding-right: 50px;
+    border: solid var(--bgcol) 2px;
+    border-radius: 10px;
+}
+
+form div > input {
+    padding-inline: 10px;
+}
