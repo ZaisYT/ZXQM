@@ -5,39 +5,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="source/styles/player.css">
-        <link rel="stylesheet" href="source/styles/leftbar.css">
+        <link rel="stylesheet" href="source/styles/navbar.css">
         <link rel="icon" type="image/x-icon" href="source/images/icon.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     </head>
 
     <body>
-        <div class="container">
-            <div class="navigation">
-                <div class="menutoggle"></div>
-                <ul class="list">
-                    <li class="list-item" style="--color:#FF5100"><a href="explorer.html">
-                        <span class="icon">
-                            <i class="fa fa-music"></i>
-                        </span>
-                        <span class="text">Inicio</span>
-                    </a></li>
-                    <li class="list-item" style="--color:#FF5100"><a href="sourcecode.html">
-                        <span class="icon">
-                            <i class="fa fa-file-code"></i>
-                        </span>
-                        <span class="text">Codigo Fuente</span>
-                    </a></li>
-                    <li class="list-item" style="--color:#FF5100"><a href="appinfo.html">
-                        <span class="icon">
-                            <i class="fa fa-gear"></i>
-                        </span>
-                        <span class="text">App Info</span>
-                    </a></li>
-                    <p class="zxqm">ZXQM</p>
-                </ul>
-            </div>
-        </div>
+        <header>
+            <a href="index.html">ZXQM</a>
 
+            <ul>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Source Code</a></li>
+                <li><a href="settings.html">App Settings</a></li>
+            </ul>
+        </header>
+        
         <div class="flexcont">
 
             <div class="info">
@@ -81,5 +65,4 @@
         </div>
     </body>
     <script src="source/scripts/player.js"></script>
-    <script src="source/scripts/navapp.js"></script>
 </html>
