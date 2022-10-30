@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  padding-top: 2vh;
+  padding-top: 5vh;
   margin-inline: .5rem;
   margin-left: 75px;
 }
