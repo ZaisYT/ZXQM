@@ -1,0 +1,93 @@
+/*  font-family: 'Roboto Mono', monospace;  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+/*  font-family: 'Carrois Gothic', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+
+/*  font-family: 'Imprima', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
+:root {
+    --bgcol: #0f0e17;
+    --bg2col: #141224;
+    --bg3col: #1d1b2c;
+    --hovercol: #ff8906;
+    --titlescol: #fffffe;
+    --paraphcol: #a7a9be;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin-top: 5vh;
+    background-color: var(--bg2col);
+}
+
+.flex-holder {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10rem;
+    padding-block: 5rem;
+    height: calc(91vh - 10rem);
+}
+
+h1, h2, h3 {
+    color: var(--titlescol);
+}
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+}
+
+h2, h3 {
+    font-size: 1.6rem;
+    font-family: 'Carrois Gothic', sans-serif;
+}
+
+button {
+    height: 5vh;
+    width: 10rem;
+    background-color: var(--bg3col);
+
+    border: 3px solid var(--bgcol);
+    border-radius: 1rem;
+}
+
+main {
+    margin-block: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main > h2 {
+    opacity: .5;
+    margin-top: .5rem;
+}
+
+.btn-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-holder > button:hover {
+    cursor: pointer;
+}
+
+.btn-holder > button:not(:first-child):not(:last-child) {
+    margin-inline: 1rem;
+}
+
+
+button > a {
+    display: flex;
+    padding: auto;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--titlescol);
+}
