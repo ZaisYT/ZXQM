@@ -1,58 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Inicio // ZXQM</title>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="source/styles/main.css">
-        <link rel="stylesheet" href="source/styles/mainbar.css">
-        <link rel="icon" type="image/x-icon" href="source/images/icon.png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Try ZXQM</title>
     </head>
 
     <body>
         <header>
-            <nav>
-                <input type="checkbox" id="ckbox">
-                <label for="ckbox" class="drawer">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </label>
-                <h1>ZXQM</h1>
-    
-                <ul class="menu-box">
-                    <li><a href="#" class="fa fa-home"> Inicio</a></li>
-                    <li><a href="explorer.html" class="fa fa-check"> Probarlo</a></li>
-                    <li><a href="about.html" class="fa fa-circle-question"></i> Sobre Nosotros</a></li>
-                    <li><a href="contact.html" class="fa fa-message"> Contactanos</a></li>
-                    <li><a href="sourcecode.html" class="fa-brands fa-html5"> Codigo Fuente</a></li>
-                </ul>
-            </nav>
+            <a href="#">ZXQM</a>
+
+            <ul>
+                <li><a href="main.html">Main</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="source.html">Source Code</a></li>
+                <li><a href="settings.html">App Settings</a></li>
+            </ul>
         </header>
 
-        <div class="flexcont">
-            <div class="mainwords">
-                <p>EL FUTURO</p>
-                <p>DE LA MÚSICA</p>
-            </div>
+        <div class="flex-holder">
+            <h1>The best music player</h1>
 
-            <div class="functions">
-                <p>EN ZXQM, LA MÚSICA</p>
-                <p>SIN COSTO Y SIN INTERRUPCIONES</p>
-            </div>
+            <main>
+                <div class="btn-holder">
+                    <button><a href="main.html">Try ZXQM</a></button>
+                    <button><a href="about.html">About ZXQM</a></button>
+                    <button><a href="source.html">ZXQM Source Code</a></button>
+                </div>
 
-            <div class="buttonholder">
-                <button class="faq" onclick="expl()">probarlo</button>
-                <button class="contact" onclick="contact()">contacto</button>
-                <button class="about" onclick="aboutpage()">sobre nosotros</button>
-                <button class="sourcecode" onclick="source()">codigo fuente</button>
-            </div>
+                <h2>In ZXQM, music for free and without interruptions</h2>
+            </main>
 
-            <div class="try">
-                <p>Prueba ZXQM Gratis</p>
-                <p>En nuestra beta privada para windows</p>
-                <p>O en nuestra beta publica en la web.</p>
-            </div>
-            <script src="source/scripts/switchpages.js"></script>
+            <footer>
+                <h2>Try ZXQM for free!</h2>
+                <h3>In the free beta version for windows.</h3>
+            </footer>
         </div>
     </body>
 </html>
