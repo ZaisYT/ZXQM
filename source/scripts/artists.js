@@ -1,10 +1,6 @@
 var getURL = new URLSearchParams(window.location.search);
 id = getURL.get('id');
 
-// if (id == null) window.open('./error.html?type=noart', '_self');
-
-const database = "./database/";
-
 var verified = document.getElementById('verified');
 var banner = document.getElementById('banner');
 var artName = document.getElementById('artName');
@@ -19,10 +15,10 @@ var ownedSongs = [];
 var featuredOrder = [];
 var featuredSong;
 
-fetch(`${database}users.json`).then(res => res.json()).then(data => {
+fetch('https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/Artist-API.json').then(res => res.json()).then(data => {
     if (id == null) return false;
 
-    let selData = data[id];
+    let selData = data.Artists[id];
 
     if (selData.isPartner) verified.style.display = "flex";
 
@@ -33,10 +29,13 @@ fetch(`${database}users.json`).then(res => res.json()).then(data => {
     artRRSS = selData.RRSS;
     featuredSong = selData.featured;
 
-    for (Element in selData.RRSS){
-        if (selData.RRSS[Element] == null) document.getElementById(Element).style.display = 'none';
-        document.getElementById(Element).setAttribute('onclick', `rrss('${Element}', '_blank')`);
-    }
+    let rrssdiv = document.querySelector(".rrss");
+    rrssdiv.style.display = 'none';
+
+    // for (Element in selData.RRSS){
+    //     if (selData.RRSS[Element] == null) document.getElementById(Element).style.display = 'none';
+    //     document.getElementById(Element).setAttribute('onclick', `rrss('${Element}', '_blank')`);
+    // }
 
     for (Element in selData.ownedSongs){
         let value = selData.ownedSongs[Element];
@@ -71,14 +70,13 @@ function createContents(space){
             let id = featuredOrder[Element];
 
             async function gd(){
-                let datas = await fetch(`${database}songs.json`).then(res => res.json()).then(data => {
-                    selData = data[id];
+                let datas = await fetch('https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/Song-API.json').then(res => res.json()).then(data => {
+                    selData = data.Songs[id];
                     
                     obj = {
                         "title": selData['name'],
                         "img": selData['imgfile'],
                         "arts": selData['artists'],
-                        "dur": selData['dur']
                     }
 
                     return obj; 
@@ -106,12 +104,11 @@ function createContents(space){
                 sdiv.appendChild(art);
 
                 let dura = document.createElement('p');
-                dura.innerHTML = datas['dur'];
+                dura.innerHTML = "Unknown";
     
                 sdiv.appendChild(dura);
     
                 let btn = document.createElement('button');
-                if (datas['dur'] == "NO DISPONIBLE") btn.disabled = true;
                 btn.setAttribute('onClick',"rTS("+ id + ");");
     
                 let svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
@@ -160,14 +157,13 @@ function createContents(space){
         let id = ownedSongs[Element];
 
         async function gd(){
-            let datas = await fetch(`${database}songs.json`).then(res => res.json()).then(data => {
-                selData = data[id];
+            let datas = await fetch('https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/Song-API.json').then(res => res.json()).then(data => {
+                selData = data.Songs[id];
                 
                 obj = {
                     "title": selData['name'],
                     "img": selData['imgfile'],
                     "arts": selData['artists'],
-                    "dur": selData['dur']
                 }
 
                 return obj; 
@@ -195,12 +191,11 @@ function createContents(space){
             sdiv.appendChild(art);
 
             let dura = document.createElement('p');
-            dura.innerHTML = datas['dur'];
+            dura.innerHTML = "Unknown";
 
             sdiv.appendChild(dura);
 
             let btn = document.createElement('button');
-            if (datas['dur'] == "NO DISPONIBLE") btn.disabled = true;
             btn.setAttribute('onClick',"rTS("+ id + ");");
 
             let svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
