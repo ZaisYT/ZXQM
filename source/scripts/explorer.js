@@ -1,16 +1,103 @@
-var time = document.getElementById("time");
-var timeico = document.getElementById("timeico");
+var total_Arts = 6;
+var total_Songs = 15;
 
-const d = new Date();
-let h = d.getHours();
+function getNum(max, loops) {
 
-if (h < 12 && h >= 5) {
-    timeico.className = "fa fa-cloud-sun"
-    time.innerHTML = " Buenos Dias."
-} else if(h < 24 && h >= 19 || h < 6 && h >= 0){
-    timeico.className = "fa fa-cloud-moon"
-    time.innerHTML = " Buenas Noches."
-} else {
-    timeico.className = "fa fa-cloud-sun"
-    time.innerHTML = " Buenas Tardes."
+    let list = [];
+
+    while( list.length < loops ) {
+        var r = Math.round( Math.random() * ( max - 0 ) + 0 );
+        if( list.indexOf(r) === -1) list.push(r);
+    }
+
+    return list;
 }
+
+function redirect(type, id){
+    switch (type){
+        case 1:
+            window.location.href=`player?id=${id}`;
+        case 2:
+            window.location.href=`artist?id=${id}`;
+        default:
+            console.error("No valid redirection type specified!");
+    }
+
+}
+
+const selArts = getNum(total_Arts, 6);
+const selSongs = getNum(total_Songs, 7);
+
+console.log(selArts)
+console.log(selSongs)
+
+function generateContent() {
+
+    function reds() {
+        let ElementID = 1;
+        for( Element in selArts ) {
+            let art = document.getElementById(`mfy_${ElementID}`);
+            art.setAttribute('onclick', `redirect(1, ${selSongs[Element]})`);
+            ElementID += 1;
+        }
+    
+        ElementID = 1;
+        for( Element in selArts ) {
+            let art = document.getElementById(`arts_${ElementID}`);
+            art.setAttribute('onclick', `redirect(2, ${selArts[Element]})`);
+            ElementID += 1;
+        }
+    }
+    reds()
+
+    fetch('./Song-API.json').then(res => res.json()).then(data => {
+
+        let ElementID = 1;
+        for( Element in selSongs ) {
+            let art = document.getElementById(`mfy_${ElementID}`);
+            let text = art.getElementsByTagName('h3')[0];
+            text.innerHTML = data.Songs[selSongs[Element]].name;
+            ElementID += 1
+        }
+
+        ElementID = 1;
+        for( Element in selSongs ) {
+            let art = document.getElementById(`mfy_${ElementID}`);
+            let text = art.getElementsByTagName('img')[0];
+            text.src = data.Songs[selSongs[Element]].imgfile;
+            ElementID += 1
+        }
+    
+        ElementID = 1;
+        for( Element in selSongs ) {
+            let art = document.getElementById(`mfy_${ElementID}`);
+            let text = art.getElementsByTagName('p')[0];
+            text.innerHTML = data.Songs[selSongs[Element]].artists[1];
+            ElementID += 1
+        }
+
+    }).catch(e => console.error(e));
+
+    fetch('./Arts-API.json').then(res => res.json()).then(data => {
+
+        let ElementID = 1;
+        for( Element in selArts ) {
+            let art = document.getElementById(`arts_${ElementID}`);
+            let text = art.getElementsByTagName('img')[0];
+            text.src = data.Artists[selArts[Element]].pfp;
+            ElementID += 1
+        }
+    
+        ElementID = 1;
+        for( Element in selArts ) {
+            let art = document.getElementById(`arts_${ElementID}`);
+            let text = art.getElementsByTagName('h3')[0];
+            text.innerHTML = data.Artists[selArts[Element]].name;
+            ElementID += 1
+        }
+
+    }).catch(e => console.error(e));
+
+}
+
+generateContent()
