@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/*  font-family: 'Roboto Mono', monospace;  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+/*  font-family: 'Carrois Gothic', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+
+/*  font-family: 'Imprima', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
 
 :root {
-    --bgcolor: #363636;
-    --primarycol: #FF5100;
-    --txtcol: #FFF;
-    --btncolor: #2b2b2b;
-    --btnhover: #5c5c5c;
-    --acol: #6d2d00;
+    --bgcol: #0f0e17;
+    --bg2col: #141224;
+    --bg3col: #1d1b2c;
+    --hovercol: #ff8906;
+    --titlescol: #fffffe;
+    --paraphcol: #a7a9be;
 }
 
 * {
@@ -14,73 +21,87 @@
     margin: 0;
 }
 
+.flex-holder {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
-    background-color: var(--bgcolor);
+    margin-top: 5vh;
+    background-color: var(--bg2col);
+    color: var(--titlescol);
 }
 
-.holder {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    margin-left: 75px;
-}
-
-.holder .timeholder {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: var(--primarycol);
-    font-size: 35px;
-    border-bottom: 2px solid var(--acol);
-    width: 345px;
-}
-
-.holder .timeholder i{
-    margin: 1rem;
-}
-
-.holder .sholder {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-}
-
-.holder .sholder span.title {
-    color: var(--primarycol);
-    font-size: 35px;
-}
-
-.holder .sholder .songs {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, 400px);
-}
-
-.holder .sholder .songs div{
+.main-content {
     display: flex;
     flex-direction: row;
-    margin-inline: .5rem;
-    background-color: var(--btncolor);
-    width: 400px;
-    text-align: center;
-    height: auto;
-    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.holder .sholder .songs div img {
-    width: 82px;
-    height: 82px;
-    margin-right: 1rem;
-}
-
-.holder .sholder .songs div div {
+.main-element {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: calc(100% - 40px);
+    height: 80px;
+    background-color: var(--bg3col);
     align-items: center;
+    margin-inline: 20px;
+    border-radius: .7rem;
+}
+
+.main-element > img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: .7rem 0 0 .7rem;
+}
+
+.main-element > h3 {
+    padding-inline: 20px;
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+#welcome, .section-header {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.section-header {
+    font-size: 1.8rem;
+}
+
+.content-holder {
+    display: flex;
     justify-content: center;
 }
 
-.holder .sholder .songs div div span {
-    margin-block: .2rem;
-    color: var(--txtcol);
+.content-mini {
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: var(--bg3col);
+    margin-inline: 20px;
+    border-radius: .7rem;
+    max-width: 170px;
+}
+
+.content-mini > img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: .7rem;
+    margin-bottom: 5px;
+}
+
+.music-section {
+    margin-bottom: 20px;
+}
+
+.artist, .song-name {
+    font-size: 1.1rem;
+    font-style: normal;
+    font-family: 'Imprima', sans-serif;
 }
