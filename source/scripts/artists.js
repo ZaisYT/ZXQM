@@ -57,7 +57,7 @@ function rrss(link, ref){
 }
 
 function rTS(sid){
-    window.open(`https://zxqm.cf/player.html?id=${sid}`, '_self');
+    window.open(`https://zxqm.cf/player?id=${sid}`, '_self');
 }
 
 function createContents(space){
