@@ -14,15 +14,10 @@ function getNum(max, loops) {
 }
 
 function redirect(type, id){
-    switch (type){
-        case 1:
-            window.location.href=`player?id=${id}`;
-        case 2:
-            window.location.href=`artist?id=${id}`;
-        default:
-            console.error("No valid redirection type specified!");
-    }
-
+    if (type == 1) window.location.href=`player?id=${id}`;
+    if (type == 2) window.location.href=`artist?id=${id}`;
+    if (type == 1 || type == 2) return;
+    console.error("No valid redirection type specified!");
 }
 
 const selArts = getNum(total_Arts, 6);
