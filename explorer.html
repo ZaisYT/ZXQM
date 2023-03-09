@@ -6,109 +6,117 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="source/styles/explorer.css">
-        <link rel="stylesheet" href="source/styles/leftbar.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="./source/styles/navbar.css">
     </head>
 
     <body>
-        <div class="container">
-            <div class="navigation">
-                <div class="menutoggle"></div>
-                <ul class="list">
-                    <li class="list-item active" style="--color:#FF5100"><a href="#">
-                        <span class="icon">
-                            <i class="fa fa-music"></i>
-                        </span>
-                        <span class="text">Inicio</span>
-                    </a></li>
-                    <li class="list-item" style="--color:#FF5100"><a href="sourcecode.html">
-                        <span class="icon">
-                            <i class="fa fa-file-code"></i>
-                        </span>
-                        <span class="text">Codigo Fuente</span>
-                    </a></li>
-                    <li class="list-item" style="--color:#FF5100"><a href="appinfo.html">
-                        <span class="icon">
-                            <i class="fa fa-gear"></i>
-                        </span>
-                        <span class="text">App Info</span>
-                    </a></li>
-                    <p class="zxqm">ZXQM</p>
-                </ul>
-            </div>
-        </div>
+        <header>
+            <a href="index">ZXQM</a>
 
-        <div class="holder">
+            <ul>
+                <li><a href="#">Main</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="source">Source Code</a></li>
+                <li><a href="settings">App Settings</a></li>
+            </ul>
+        </header>
 
-            <div class="timeholder">
-                <i class="fa fa-cloud-sun" id="timeico"></i><p id="time"></p>
-            </div>
+        <div id="song-name" class="flex-holder">
 
-            <div class="sholder">
-                <span class="title">New To ZXQM.</span>
-                <div class="songs">
-                    <div onclick="player(1)">
-                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/bzrpvol51.png">
-                        <div>
-                            <span>Villano Antillano: Bzrp Music Sessions, Vol. 51</span>
-                            <span>Bizarrap & Villano Antillano</span>
-                        </div>
-                    </div>
-                    <div onclick="player(5)">
-                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/Titimepregunto.jpg">
-                        <div>
-                            <span>Titi me pregunto</span>
-                            <span>Bad Bunny</span>
-                        </div>
-                    </div>
-                    <div onclick="player(4)">
-                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/TeFelicito.png">
-                        <div>
-                            <span>Te Felicito</span>
-                            <span>Rauw Alejandro & Shakira</span>
-                        </div>
-                    </div>
-                    <div onclick="player(0)">
-                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/NenaMaldicion.jpg">
-                        <div>
-                            <span>Nena Maldicion</span>
-                            <span>Paulo Londra</span>
-                        </div>
-                    </div>
-                    <div onclick="player(2)">
-                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/UltraSolo.png">
-                        <div>
-                            <span>ULTRA SOLO</span>
-                            <span>Polima Westcoast & Pailita</span>
-                        </div>
-                    </div>
-                    <div onclick="player(3)">
-                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/PazMental.png">
-                        <div>
-                            <span>Paz Mental</span>
-                            <span>Cris Mj</span>
-                        </div>
-                    </div>
-                    <div onclick="player(7)">
-                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/bzrpvol23.png">
-                        <div>
-                            <span>Paulo Londra: Bzrp Music Sessions, Vol. 23</span>
-                            <span>Bizarrap & Paulo Londra</span>
-                        </div>
-                    </div>
-                    <div onclick="player(6)">
-                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/bzrpvol49.jpg">
-                        <div>
-                            <span>Residente: Bzrp Music Sessions, Vol. 49</span>
-                            <span>Bizarrap & Residente</span>
-                        </div>
-                    </div>
+            <h1 id="welcome">Time to listen some music!</h1>
+
+            <div id="song-name" class="main-content">
+                <div id="song-name" class="main-element">
+                    <img src="/user-imgs/bizarrap.jpg">
+                    <h3>Bizarrap</h3>
+                </div>
+                <div id="song-name" class="main-element">
+                    <img src="/user-imgs/kevin-kaarl.jpg">
+                    <h3>Kevin Kaarl</h3>
+                </div>
+                <div id="song-name" class="main-element">
+                    <img src="/user-imgs/el-jordan23.jpg">
+                    <h3>El Jordan 23</h3>
                 </div>
             </div>
+
+            <div class="music-section">
+
+                <h2 class="section-header">Made for you</h2>
+
+                <div class="content-holder">
+                    <div class="content-mini" id="mfy_1">
+                        <img src="https://i1.sndcdn.com/artworks-LC4tL31pVYk8-0-t500x500.jpg">
+                        <h3 class="song-name">Shakira: Bzrp Music Sessions, Vol. 53</h3>
+                        <p class="artist">Shakira, Bizarrap</p>
+                    </div>
+                    <div class="content-mini" id="mfy_2">
+                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/NenaMaldicion.jpg">
+                        <h3 class="song-name">Nena Maldicion</h3>
+                        <p class="artist">Paulo Londra</p>
+                    </div>
+                    <div class="content-mini" id="mfy_3">
+                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/bzrpvol51.png">
+                        <h3 class="song-name">Villano Antillano: Bzrp Music Sessions, Vol. 51</h3>
+                        <p class="artist">Villano Antillano, Bizarrap</p>
+                    </div>
+                    <div class="content-mini" id="mfy_4">
+                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/bzrpvol49.jpg">
+                        <h3 class="song-name">Residente: Bzrp Music Sessions, Vol. 49</h3>
+                        <p class="artist">Residente, Bizarrap</p>
+                    </div>
+                    <div class="content-mini" id="mfy_5">
+                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/TeFelicito.png">
+                        <h3 class="song-name">Te Felicito</h3>
+                        <p class="artist">Rauw Alejandro, Shakira</p>
+                    </div>
+                    <div class="content-mini" id="mfy_6">
+                        <img src="https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/images/chance.jpg">
+                        <h3 class="song-name">Chance</h3>
+                        <p class="artist">Paulo Londra</p>
+                    </div>
+                    <div class="content-mini" id="mfy_7">
+                        <img src="https://e-cdn-images.dzcdn.net/images/cover/33a40c1cf41b58a708b827e3c98bf2e9/264x264-000000-80-0-0.jpg">
+                        <h3 class="song-name">San Lucas</h3>
+                        <p class="artist">Kevin Kaarl</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="artist-section">
+
+                <h2 class="section-header">New Artists</h2>
+
+                <div class="content-holder">
+                    <div class="content-mini" id="arts_1">
+                        <img src="/user-imgs/bizarrap.jpg">
+                        <h3 id="artist" class="artist">Bizarrap</h3>
+                    </div>
+                    <div class="content-mini" id="arts_2">
+                        <img src="/user-imgs/paulo-londra.jpg">
+                        <h3 id="artist" class="artist">Paulo londra</h3>
+                    </div>
+                    <div class="content-mini" id="arts_3">
+                        <img src="/user-imgs/quevedo.jpg">
+                        <h3 id="artist" class="artist">Quevedo</h3>
+                    </div>
+                    <div class="content-mini" id="arts_4">
+                        <img src="/user-imgs/shakira.jpg">
+                        <h3 id="artist" class="artist">Shakira</h3>
+                    </div>
+                    <div class="content-mini" id="arts_5">
+                        <img src="/user-imgs/el-jordan23.jpg">
+                        <h3 id="artist" class="artist">El Jordan 23</h3>
+                    </div>
+                    <div class="content-mini" id="arts_6">
+                        <img src="/user-imgs/kevin-kaarl.jpg">
+                        <h3 id="artist" class="artist">Kevin Kaarl</h3>
+                    </div>
+                </div>
+
+            </div>
+            <script src="./source/scripts/explorer_generator.js"></script>
         </div>
-        
     </body>
-    <script src="source/scripts/switchpages.js"></script>
-    <script src="source/scripts/explorer.js"></script>
-    <script src="source/scripts/navapp.js"></script>
 </html>
