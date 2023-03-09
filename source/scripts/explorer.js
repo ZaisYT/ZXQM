@@ -50,7 +50,7 @@ function generateContent() {
     }
     reds()
 
-    fetch('./Song-API.json').then(res => res.json()).then(data => {
+    fetch('https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/Song-API.json').then(res => res.json()).then(data => {
 
         let ElementID = 1;
         for( Element in selSongs ) {
@@ -78,7 +78,7 @@ function generateContent() {
 
     }).catch(e => console.error(e));
 
-    fetch('./Arts-API.json').then(res => res.json()).then(data => {
+    fetch('https://raw.githubusercontent.com/ZaisYT/ZXQM-FILES/main/Artist-API.json').then(res => res.json()).then(data => {
 
         let ElementID = 1;
         for( Element in selArts ) {
