@@ -23,8 +23,8 @@ function redirect(type, id){
 const selArts = getNum(total_Arts, 6);
 const selSongs = getNum(total_Songs, 7);
 
-console.log(selArts)
-console.log(selSongs)
+//console.log(selArts);
+//console.log(selSongs);
 
 function generateContent() {
 
@@ -52,7 +52,7 @@ function generateContent() {
             let art = document.getElementById(`mfy_${ElementID}`);
             let text = art.getElementsByTagName('h3')[0];
             text.innerHTML = data.Songs[selSongs[Element]].name;
-            ElementID += 1
+            ElementID += 1;
         }
 
         ElementID = 1;
@@ -60,7 +60,7 @@ function generateContent() {
             let art = document.getElementById(`mfy_${ElementID}`);
             let text = art.getElementsByTagName('img')[0];
             text.src = data.Songs[selSongs[Element]].imgfile;
-            ElementID += 1
+            ElementID += 1;
         }
     
         ElementID = 1;
@@ -68,7 +68,7 @@ function generateContent() {
             let art = document.getElementById(`mfy_${ElementID}`);
             let text = art.getElementsByTagName('p')[0];
             text.innerHTML = data.Songs[selSongs[Element]].artists[1];
-            ElementID += 1
+            ElementID += 1;
         }
 
     }).catch(e => console.error(e));
@@ -80,7 +80,7 @@ function generateContent() {
             let art = document.getElementById(`arts_${ElementID}`);
             let text = art.getElementsByTagName('img')[0];
             text.src = data.Artists[selArts[Element]].pfp;
-            ElementID += 1
+            ElementID += 1;
         }
     
         ElementID = 1;
@@ -88,11 +88,11 @@ function generateContent() {
             let art = document.getElementById(`arts_${ElementID}`);
             let text = art.getElementsByTagName('h3')[0];
             text.innerHTML = data.Artists[selArts[Element]].name;
-            ElementID += 1
+            ElementID += 1;
         }
 
     }).catch(e => console.error(e));
 
 }
 
-generateContent()
+generateContent();
