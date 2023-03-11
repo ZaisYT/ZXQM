@@ -30,7 +30,7 @@ function generateContent() {
 
     function reds() {
         let ElementID = 1;
-        for( Element in selArts ) {
+        for( Element in selSongs ) {
             let art = document.getElementById(`mfy_${ElementID}`);
             art.setAttribute('onclick', `redirect(1, ${selSongs[Element]})`);
             ElementID += 1;
