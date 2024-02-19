@@ -1,0 +1,16 @@
+{
+    "Lyrics": [
+        {
+            "startTimeMs": "0",
+            "words": "Lyric line 1",
+            "syllables": [],
+            "endTimeMs": "0"
+        },
+        {
+            "startTimeMs": "3970",
+            "words": "Lyric line 2",
+            "syllables": [],
+            "endTimeMs": "0"
+        }
+    ]
+}
