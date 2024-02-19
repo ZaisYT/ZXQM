@@ -1,0 +1,206 @@
+/*  font-family: 'Roboto Mono', monospace;  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+/*  font-family: 'Carrois Gothic', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+
+/*  font-family: 'Imprima', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
+:root {
+    --bgcol: #0f0e17;
+    --bg2col: #141224;
+    --bg3col: #1d1b2c;
+    --hovercol: #ff8906;
+    --titlescol: #fffffe;
+    --paraphcol: #a7a9be;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin-top: 5vh;
+    background-color: var(--bgcol);
+}
+
+.bannerzone {
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+    border-bottom: solid var(--titlescol) 1px;
+}
+
+#banner {
+    z-index: -1;
+    background-color: var(--bgcol);
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    filter: brightness(0.5);
+}
+
+.bannerzone .infoholder {
+    position: absolute;
+    height: 38vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.bannerzone .infoholder .info {
+    display: flex;
+    flex-direction: row;
+}
+
+.bannerzone .infoholder .info #artName {
+    font-family: 'Roboto Mono', monospace;
+    font-style: oblique;
+    color: var(--titlescol);
+    font-size: 42px;
+}
+
+.bannerzone .infoholder .info span {
+    display: none;
+    flex-direction: row;
+    margin-inline-start: 10px;
+    align-items: center;
+}
+
+#twitter, #instagram, #spotify, #youtube, #facebook, #tiktok, #custom {
+    cursor: pointer;
+    margin-inline-start: 5px;
+    height: 35px;
+}
+
+#twitter:hover > svg g:first-child path {
+    fill: rgb(0, 153, 255);
+}
+
+#instagram:hover > svg g path {
+    fill: rgb(248, 126, 69);
+}
+
+#spotify:hover > svg g path {
+    fill: rgb(0, 255, 21);
+}
+
+#youtube:hover > svg g path {
+    fill: rgb(255, 0, 0);
+}
+
+#facebook:hover > svg g path {
+    fill: rgb(0, 17, 255);
+}
+
+#tiktok:hover > svg g path {
+    fill: rgb(211, 127, 127);
+}
+
+#custom:hover > svg g path {
+    fill: rgb(0, 225, 255);
+}
+
+.songs {
+    margin: 25px;
+}
+
+.songs > div:not(:first-child) {
+    border-bottom: solid var(--titlescol) 2px;
+    padding-block: 30px;
+}
+
+
+.songs > div:first-child {
+    border-bottom: solid var(--titlescol) 2px;
+    padding-block-end: 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title p {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--titlescol);
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+.song {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bg2col);
+    max-width: 400px;
+    min-width: 200px;
+    border-radius: .5rem;
+}
+
+.song > img {
+    width: 75px;
+    height: 75px;
+    aspect-ratio: 1/1;
+    border-radius: .5rem;
+    margin-inline-end: 10px;
+}
+
+.song > .infosong {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--paraphcol);
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 0.9rem;
+}
+
+.song .infosong > p:first-child {
+    font-size: 1.5rem;
+    font-family: 'Roboto Mono', monospace;
+    margin-block-end: 5px;
+    color: var(--titlescol);
+    max-width: 230px;
+    min-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song > .infosong div {
+    display: flex;
+    flex-direction: row;
+}
+
+.song > .infosong div p:first-child::after {
+    content: ' \25CF ';
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 0.9rem;
+    margin-inline-end: 5px;
+}
+
+.song > button {
+    cursor: pointer;
+    width: 75px;
+    margin-left: auto;
+    transition: background-color .2s;
+    background-color: var(--bg3col);
+    border-radius: .5rem;
+    border: 0;
+}
+
+.song > button:hover {
+    transition: background-color .2s;
+    background-color: var(--hovercol);
+}
+
+#recommended, #library {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 10px;
+}

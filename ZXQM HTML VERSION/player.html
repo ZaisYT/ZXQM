@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nena Maldicion - Paulo Londra \\ ZXQM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="source/styles/player.css">
+        <link rel="stylesheet" href="source/styles/navbar.css">
+        <link rel="icon" type="image/x-icon" href="source/images/icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    </head>
+
+    <body>
+        <header>
+            <a href="index">ZXQM</a>
+
+            <ul>
+                <li><a href="explorer">Main</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="source">Source Code</a></li>
+                <li><a href="settings">App Settings</a></li>
+            </ul>
+        </header>
+        
+        <div class="flexcont">
+
+            <div class="info">
+
+                <div class="imgholder">
+                </div>
+    
+                <div class="infosong">
+                    <p class="nametxt" id="name"></p>
+                    <p class="singertxt" id="artist"></p>
+                </div>
+    
+            </div>
+
+            <div class="progressholder">
+                <input type="range" id="seekslider" min="0" max="129" value="0" step="1" title="Seek Slider">
+                <p class="durtxt" id="duration">00:00 / 00:00</p>
+            </div>
+
+            <div class="controls">
+
+                <div class="buttonHolder">
+                    <button class="lyrbtn fa fa-music" onclick="togglelyrics()" id="lyrbtn" title="Mostrar Letras [L]"></button>
+                    <button class="switchbtn fa fa-play" onclick="playerstate()" id="switchbtn" title="Play [SPACE]"></button>
+                </div>
+
+                <input type="range" min="0" max="1" value="0.75" step="0.01" id="volume" class="volumecnt" title="Desliza para controlar el volumen">
+                <p id="volico" class="fa fa-volume-high" title="Mute [M]"></p>
+    
+                <div class="repeatChecker">
+                    <input type="checkbox" id="loop">
+                    <label for="loop" class="fa fa-repeat" title="Repetir [R]"></label>
+                </div>
+
+            </div>
+
+            <div class="lyricholder">
+                <p class="lyrtxt" id="lyricshow">No hay letras disponibles actualmente para esta cancion.</p>
+            </div>
+
+        </div>
+    </body>
+    <script src="source/scripts/player.js"></script>
+</html>

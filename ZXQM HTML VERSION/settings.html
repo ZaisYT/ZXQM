@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="source/images/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="source/styles/navbar.css">
+        <link rel="stylesheet" href="source/styles/settings.css">
+        <title>ZXQM - App Settings</title>
+    </head>
+    <body>
+        <header>
+            <a href="index">ZXQM</a>
+
+            <ul>
+                <li><a href="explorer">Main</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="source">Source Code</a></li>
+                <li><a href="#">App Settings</a></li>
+            </ul>
+        </header>
+
+        <div class="flex-holder">
+            <h1>ZXQM Web App</h1>
+
+            <h2>WEB APP VERSION:</h2>
+            <p>v.2.1.0-Closed-Beta</p>
+
+            <div class="form-setts">
+                <h1>Settings</h1>
+
+                <form id="settings">
+                    <label>[ALPHA] Quality:</label>
+                    <div class="get-values">
+                        <select id="quality">
+                            <option value="">--Select Value--
+                            <option value="Very High">Very High
+                            <option value="High">High
+                            <option value="Normal">Normal
+                            <option value="Low">Low
+                            <option value="Very Low">Very Low
+                        </select>
+        
+                        <input type="submit" value="Save">
+                    </div>
+                </form>
+            </div>
+
+            <div class="zxqm-copy">
+                <h1>ZXQM Copyright</h1>
+                <div class="arts-prof">
+                    <h2>Artist profiles</h2>
+                    <p>ZXQM isn't a viable option to support artists.</p>
+                    <p>Because of that, ZXQM has added all the artist accounts in the profile.</p>
+                    <p>So, you can follow, listen and support the artist in other platform.</p>
+                </div>
+    
+                <div class="copy-songs">
+                    <h2>Copyrighted songs</h2>
+                    <p>All the ZXQM songs are uploaded to a data server.</p>
+                    <p>All the users can add songs, for safety measures the songs are checked for a mod before uploading.</p>
+                    <p>After saying that, the artist has all the privileges to delete a song from our site.</p>
+                    <p>If any artist want to delete his songs from the data server, just send a mail to support@zxqm.cf</p>
+                </div>
+    
+                <div class="zxqm-terms">
+                    <h2>ZXQM terms</h2>
+                    <p>ZXQM is in a growing stage, please make sure you have shared the page.</p>
+                    <p>If you have any suggest to zxqm you can send it to suggest@zxqm.cf</p>
+                    <p>If you have any problem, just report it to support@zxqm.cf</p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var form = document.getElementById('settings');
+            const quality = form.elements['quality'];
+            
+            if (localStorage.getItem("selQual")) quality.value = localStorage.getItem("selQual");
+            
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                let qval = quality.value;
+                localStorage.setItem("selQual", qval);
+                console.log(`Submitted ${qval} to the cookies.`);
+            });
+        </script>
+    </body>
+</html>

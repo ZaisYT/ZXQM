@@ -1,0 +1,107 @@
+/*  font-family: 'Roboto Mono', monospace;  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+/*  font-family: 'Carrois Gothic', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+
+/*  font-family: 'Imprima', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
+:root {
+    --bgcol: #0f0e17;
+    --bg2col: #141224;
+    --bg3col: #1d1b2c;
+    --hovercol: #ff8906;
+    --titlescol: #fffffe;
+    --paraphcol: #a7a9be;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.flex-holder {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin-top: 5vh;
+    background-color: var(--bg2col);
+    color: var(--titlescol);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.main-element {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 40px);
+    height: 80px;
+    background-color: var(--bg3col);
+    align-items: center;
+    margin-inline: 20px;
+    border-radius: .7rem;
+}
+
+.main-element > img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: .7rem 0 0 .7rem;
+}
+
+.main-element > h3 {
+    padding-inline: 20px;
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+#welcome, .section-header {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.section-header {
+    font-size: 1.8rem;
+}
+
+.content-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.content-mini {
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: var(--bg3col);
+    margin-inline: 20px;
+    border-radius: .7rem;
+    max-width: 170px;
+}
+
+.content-mini > img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: .7rem;
+    margin-bottom: 5px;
+}
+
+.music-section {
+    margin-bottom: 20px;
+}
+
+.artist, .song-name {
+    font-size: 1.1rem;
+    font-style: normal;
+    font-family: 'Imprima', sans-serif;
+}
